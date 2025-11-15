@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADISSUPPORT - Reach Your True Potential</title>
+    <style>
+        :root {
+            --teal: #008080;
+            --teal-light: #20B2AA;
+            --teal-dark: #006666;
+            --gray: #2F4F4F;
+            --gray-light: #F5F5F5;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--gray-light);
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* Header & Logo */
+        header {
+            background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .logo-subtitle {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,128,128,0.8), rgba(47,79,79,0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23008080" width="1200" height="800"/><circle fill="%2320B2AA" cx="200" cy="200" r="100" opacity="0.3"/><circle fill="%2320B2AA" cx="1000" cy="600" r="150" opacity="0.2"/></svg>');
+            background-size: cover;
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            background: var(--white);
+            margin: 2rem 0;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--teal);
+        }
+
+        .section h2 {
+            color: var(--teal);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: var(--gray-light);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--teal);
+            margin-bottom: 1rem;
+        }
+
+        /* Form Styles */
+        .form-section {
+            background: linear-gradient(135deg, var(--teal-light), var(--teal));
+            color: var(--white);
+        }
+
+        .form-section h2 {
+            color: var(--white);
+            text-align: center;
+        }
+
+        .signup-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: var(--white);
+            color: var(--gray);
+        }
+
+        input:focus, select:focus {
+            outline: 3px solid var(--teal-dark);
+        }
+
+        .submit-btn {
+            background: var(--gray);
+            color: var(--white);
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: block;
+            margin: 2rem auto 0;
+        }
+
+        .submit-btn:hover {
+            background: var(--teal-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ADISSUPPORT</div>
+        <div class="logo-subtitle">Reach Your True Potential</div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Embrace Adventure, Sports & Community</h1>
+            <p>Unlock your potential through tailored sports and outdoor activities designed to inspire, challenge, and connect you with your community.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="section">
+            <h2>Our Services</h2>
+            <p>At ADISSUPPORT, we specialize in creating personalized sports and outdoor activity programs that cater to individuals of all abilities. Our experienced support team works closely with you to design activities that match your interests, goals, and comfort level.</p>
+            
+            <p>We offer a diverse range of activities including adaptive sports, outdoor adventures, team sports, and individual fitness programs. Whether you're interested in wheelchair basketball, swimming, hiking, kayaking, or trying something completely new, we provide the support and equipment needed to ensure a safe and enjoyable experience.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚽</div>
+                    <h3>Team Sports</h3>
+                    <p>Basketball, Soccer, Cricket and more with adaptive equipment</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏞️</div>
+                    <h3>Outdoor Adventures</h3>
+                    <p>Hiking, Camping, Nature walks and exploration</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3>Social Sports</h3>
+                    <p>Community games and social sporting events</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏊</div>
+                    <h3>Water Activities</h3>
+                    <p>Swimming, Kayaking, Adaptive surfing</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Why Choose ADISSUPPORT?</h2>
+            <p>We understand that every individual has unique abilities and aspirations. Our approach is centered on your personal journey, focusing on what you can achieve rather than limitations. Our support workers are not just trained professionals - they're passionate about sports, outdoor activities, and helping you discover new possibilities.</p>
+            
+            <p>What sets us apart is our commitment to creating genuine connections within the community. We partner with local sports clubs, recreation centers, and outdoor organizations to ensure you have access to the best facilities and opportunities. Our programs are designed to build confidence, improve physical health, and create lasting friendships.</p>
+            
+            <p>We believe that sports and outdoor activities should be accessible to everyone. Our team specializes in adapting activities to ensure full participation, regardless of physical or cognitive abilities. From modified equipment to personalized support strategies, we remove barriers to participation.</p>
+        </section>
+
+        <section class="section">
+            <h2>Benefits of Our Programs</h2>
+            <p>Participating in our sports and outdoor programs offers numerous benefits beyond physical fitness. You'll experience improved mental wellbeing, increased self-confidence, and enhanced social connections. Regular physical activity has been shown to reduce anxiety and depression while boosting overall happiness and life satisfaction.</p>
+            
+            <p>Our participants often discover hidden talents, develop new skills, and gain a greater sense of independence. The camaraderie built through team sports and group activities creates support networks that extend beyond our sessions. Many of our participants form lasting friendships and become more actively involved in their local communities.</p>
+            
+            <p>We track your progress and celebrate your achievements, no matter how big or small. Whether it's learning a new sport, achieving a personal fitness goal, or simply trying something outside your comfort zone, we're here to support and cheer you on every step of the way.</p>
+        </section>
+
+        <section class="section form-section">
+            <h2>Start Your Journey Today</h2>
+            <p>Ready to explore new possibilities and reach your true potential? Complete the form below and our team will contact you to discuss how we can support your sports and outdoor activity goals.</p>
+            
+            <form class="signup-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="suburb">Suburb *</label>
+                    <input type="text" id="suburb" name="suburb" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="disability">Disability Type (Optional)</label>
+                    <select id="disability" name="disability">
+                        <option value="">Select an option</option>
+                        <option value="physical">Physical Disability</option>
+                        <option value="intellectual">Intellectual Disability</option>
+                        <option value="sensory">Sensory Disability</option>
+                        <option value="psychosocial">Psychosocial Disability</option>
+                        <option value="neurological">Neurological Disability</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">Begin Your Adventure</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ADISSUPPORT. All rights reserved. | NDIS Provider</p>
+        <p>Helping you reach your true potential through sports and outdoor adventures</p>
+    </footer>
+</body>
+</html>
